@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{subfigure}  % for inserting figure
+\usepackage{wrapfig}    % for wrapping figure
+
+\begin{document}
+To insert a figure we use graphicx package: \\
+
+\begin{figure}[!hbt]
+    \centering
+    \subfigure[Caption1]{
+        \includegraphics[width=100px]{kitty.png}
+    }
+    \subfigure[Caption2]{
+        \includegraphics[width=50px]{kitty.png}
+
+    }
+    \caption{Kitten image}
+
+\end{figure}
+
+2nd method is to use hfill:
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[width=3.0cm]{kitty.png}\hfill
+    \includegraphics[width=3.0cm]{kitty.png}
+    \caption{Girl and flower}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\begin{flushright}
+    \underline{Figure Wrapped by Texts:} \\
+\end{flushright} 
+
+\begin{wrapfigure}[10]{r}{3cm} % r = right, 3cm = width... it will be aligned to the right and have a width of 5cm. The [10] part specifies the vertical alignment of the content in the column
+    \includegraphics[width=3.0cm]{kitty.png}
+    \caption{Girl.}
+    \label{girl}
+    \end{wrapfigure}
+    %
+    Like a table as stated in 7.8 on defined in the
+wrapfig package. The wrapfigure environment, which creates a spacpage 68, a figure can also be wrapped around
+by texts, which is done through the wrapfigure environment3 defe for
+inserting a figure, takes one optional and two mandatory arguments, i.e.,
+begin{wrapfigure}[aline]{aside}{asize}, where aside is the location of the space
+(l for left side or r for right side), while asize is the size of horizontal space and
+aline is the number of lines of texts for vertical space. If insufficient number of
+
+
+
+
+\end{document}

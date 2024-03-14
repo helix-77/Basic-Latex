@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\begin{document}
+
+1.drawing lines: \\
+\setlength{\unitlength}{0.75mm}
+\begin{picture}(60,30)(0,0)
+    \put(5,5){\line(0,1){20}}
+    \put(15,15){\line(1,0){20}}
+    \put(45,25){\line(1,-1){15}}
+\end{picture}
+
+2.using vector: \\
+\begin{picture}(120,60)(0,0)
+    \thicklines %used to set the thickness
+    \put(5,5){\vector(1,2){20}}
+    \put(75,15){\vector(-1,0){50}}
+    \put(115,55){\vector(-1,-2){25}}
+\end{picture}
+
+3.using multiput: \\
+\setlength{\unitlength}{0.75mm}
+\begin{picture}(60,30)(0,0)
+    \multiput(5,5)(7,5){3}{\line(1,0){20}}
+    \multiput(60,5)(10,2){3}{\vector(1,2){10}}
+\end{picture}
+
+
+
+4. using makebox for no visible box: \\
+\setlength{\unitlength}{1mm}
+\begin{picture}(60,30)(0,0)
+    \put(3,5){\makebox(100,20)[c]{Center text}}
+    \put(3,5){\makebox(100,20)[t]{Top text}}
+    \put(3,5){\makebox(100,20)[b]{Bottom text}}
+    \put(3,5){\makebox(100,20)[l]{Left text}}
+    \put(3,5){\makebox(100,20)[r]{Right text}}
+    \put(3,5){\makebox(100,20)[tl]{TL text}}
+\end{picture}
+
+5. using framebox and dashbox: \\
+\setlength{\unitlength}{1mm}
+\begin{picture}(55,60)(0,0)
+    \put(5,5){\framebox(18,5)[m]{frame box}}
+    \put(50,5){\dashbox{1}(20,10)[m]{dash box}}
+\end{picture}
+
+
+
+
+\end{document}

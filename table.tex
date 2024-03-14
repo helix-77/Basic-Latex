@@ -1,0 +1,136 @@
+\documentclass[a4paper]{article}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{longtable}
+
+
+\begin{document}
+
+
+
+\begin{table} % table environment
+    \centering
+    \caption{Obtained marks.}
+    \label{tab-1}
+    \begin{tabular}{|c|c|c|c|}
+        \hline Name  & Math & Phy & Chem \\
+        \hline Robin & 80   & 68  & 60   \\
+        \hline Julie & 72   & 62  & 66   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table \ref{tab-1} shows the Obtained marks. % for referencing
+
+
+\begin{table}
+    \centering
+    \caption{Scored points.}
+    \label{tab-2}
+    \begin{tabularx}{0.8\linewidth}{|X|c| >{\raggedleft\arraybackslash}X|}
+        % here, X is for flexible width, \raggedleft is for flushing right and \arraybackslash is for ignoring \\ 
+        \hline {\bf Name} & {\bf Sex} & {\bf Points} \\
+        \hline Milan      & M         & 1500         \\
+        Julie             & F         & 1,325        \\
+        Sekhar            & M         & 922          \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+Table \ref{tab-2} shows the Scored marks \\ \\ % for referencing
+
+
+
+
+
+
+
+
+
+We use slash hfill to make side by side tables.
+\begin{table}[!hbt]  % !hbt means here, bottom, top
+    % \centering
+    \caption{Obtained marks. 2}
+    \begin{tabular}{|l|c|c|c|}
+        \hline Name   & \begin{sideways}Mathematics\end{sideways} & \begin{sideways}Physics\end{sideways} & \begin{sideways}Chemistry\end{sideways} \\
+        \hline Robin  & 80                                        & 68                                    & 60                                      \\
+        \hline Julie  & 72                                        & 62                                    & 66                                      \\
+        \hline Robert & 75                                        & 70                                    & 71                                      \\
+        \hline
+    \end{tabular} \hfill
+    % we can't use blank line here. Instead we will use % to comment out the blank line
+    \begin{tabular}{|p{3.5cm}|m{1.5cm}|b{1.6cm}|} % p, m, b are for top, middle and bottom alignment(works on reverse)
+        \hline This is a paragraph & A medium size entry & This is another long entry \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{\bf Wrap table:} \\
+
+\begin{wraptable}{r}{5cm}   % r means right, 5cm is the width
+    \centering
+    \label{wrap-table}
+    \begin{tabular}{|l|c|c|c|}
+        \hline Name & Math & Phy & Chem\\
+        \hline Robin & 80 & 68 & 60\\
+        \hline Julie & 72 & 62 & 66\\
+        \hline Robert & 75 & 70 & 71\\
+        \hline
+    \end{tabular}
+    \caption{Obtained marks - 3}
+    \end{wraptable}
+    If the size of a table is very small compared to the width of a page, the wraptable
+environment, supported by the wrapfig package, can be used to wrap around the
+table by texts. The wraptable environment needs two mandatory arguments, i.e.,
+ where aside and asize are, respectively, the  and size of the table. The location can be specified by l (left side of the page)
+or r (right side of the page), while the size is specified in units (e.g., 25mm, 1.0in,
+or 0.3. The wraptable environment is similar with the table environment;
+the only difference lies in creating the environment. \\
+    \underline{Table \ref{wrap-table} has been shown as referencing.} \\ \\
+
+
+
+
+
+
+\newpage
+
+
+
+\underline{\bf Nested Table: }\\
+
+\begin{table}[!hbt]
+    \begin{tabularx}{\linewidth}{|l|X|c|}
+        \hline semester & score & Total \\
+        \hline First & {
+            \begin{tabularx}{\linewidth}{X|c}
+                English & 69 \\
+                Science & 80 \\
+                Drawing & 92
+            \end{tabularx}
+        } & 241 \\
+        \hline
+        \multicolumn{2}{|r|}{Total} & 241 \\    % 2 columns will be merged and the text will be right aligned
+        \hline
+    \end{tabularx}
+\end{table}
+
+
+
+
+\end{document}

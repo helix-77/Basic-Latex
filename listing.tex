@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\title{Listing}
+\author{Atik Mouhtasim}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+We use enumerate for listing: \\
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{enumerate}
+
+
+
+
+
+We can also create sub list and label them:
+\begin{enumerate}
+    \item Dhaka \label{dhk}
+    \begin{enumerate}
+        \item Motijhil
+        \begin{enumerate}
+            \item Kamlapur
+            \item arambag
+        \end{enumerate}
+        \item Mirpur
+        \item Gulshan
+    \end{enumerate}
+    \item Thakurgaon \label{tha}
+    \begin{enumerate}
+        \item Hazipara \label{hz}
+        \item Chou-rasta
+    \end{enumerate}
+\end{enumerate}
+Here \ref{tha} is my hometown and \ref{hz} is where i live. \\  
+This way we can use referencing \\
+
+
+
+
+\begin{enumerate}
+    \renewcommand{\labelenumi}{Q.\theenumi}
+    \item We used renewcommand to change the label of the list to Q.1, Q2 etc
+    \item See the code snippets to understand
+    \item question 3 \label{q3}
+    \item Now lets reference Q3 item...
+\end{enumerate}
+Answer the question \ref{q3} below. (here We used referencing) \\
+\textbf{We should use renewcommand within enumerate environment else the change to the label will be global which we don't want.} \\ \\
+ 
+
+
+Another method to change labeling:
+\begin{enumerate}[{\bf Ex{a}mple 1:}]
+    \item item 1
+    \begin{enumerate}[{\bf problem(a):}]
+        \item subitem 1
+        \item subitem 2
+    \end{enumerate}
+    \item item 2
+\end{enumerate}
+
+
+
+
+
+We use itemize environment for unlisted ordering
+\begin{itemize}
+    \item we use itemize instead of enumerate
+    \item item 2
+\end{itemize}
+
+
+
+
+
+For renewcommand on itemize(we should also use graphicx package):
+\begin{itemize}
+    \renewcommand{\labelitemi}{$\star$}
+    \renewcommand{\labelitemii}{$\Rightarrow$}
+    \item India
+    \begin{itemize}
+        \item Assam
+        \item Bihar
+        \item Punjab
+    \end{itemize}
+    \item Sri Lanka
+\end{itemize}
+
+
+
+
+
+
+\end{document}

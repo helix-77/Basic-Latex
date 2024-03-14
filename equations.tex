@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}   % for maths equation
+\usepackage{amssymb}
+
+
+\begin{document}
+
+\large
+
+ 
+
+% eq 1
+\begin{equation}
+    y=mx+c
+    \label{eq1}
+\end{equation}
+
+
+% for refering to the 1st equation
+The equation (\ref{eq1}) is for a straight line. \\
+
+
+
+\begin{equation*}
+    \mbox{text}\quad x=x^\mathrm{low}+yd \enspace . %mbox for message  , \enspace for space
+\end{equation*}
+
+
+% eq 2
+\begin{equation}
+    y=mx^2+\sqrt{x}
+    \label{eq2}
+\end{equation}
+
+% eq 3
+\begin{equation}
+    y=\sum_{0}^{N} n^2
+    \label{eq3}
+\end{equation}
+
+
+% eq 4
+\begin{equation}
+    y=\sum_{0}x_{n}^2
+    \label{eq4}
+\end{equation}
+
+% eq 5
+\begin{equation}
+    y=\int xdx
+    \label{eq5}
+\end{equation}
+
+
+% eq 6
+\begin{equation}
+    y=\int_{0}^{\infty} xdx
+    % \nonumber           % for not showing the equation number
+\end{equation}
+
+
+% eq 7
+\begin{equation}
+    y=\int_{-\infty}^{\infty} (x^2 +2) dx
+    \label{eq7}
+\end{equation}
+
+
+% eq 8
+\begin{equation}
+    y=\frac{x-a}{x-b}
+    \label{eq7}
+\end{equation}
+
+% eq 9
+\begin{equation}
+    a < b < c
+    \label{eq8}
+\end{equation}
+
+% eq 10
+\begin{equation}
+    a \leq b \geq c
+    \label{eq9}
+\end{equation}
+
+
+
+% eq 10
+\begin{equation}
+    f_x(x)=\left\{ \begin{array}{lll}
+        0, & \mbox{if $x<0$}\\
+        \frac{x-a}{a-b}, & \mbox{if $a \leq x < b$}\\
+        1, & \mbox{if $x \geq b$}
+    \end{array} \right.
+\end{equation}
+
+% eq 11
+\begin{equation}
+    \dot{x}, \ddot{x}, \dddot{x}, \ddddot{x} 
+    \label{eq10}
+\end{equation}
+
+% eq 12
+\begin{equation}
+    \frac{\partial{y}}{\partial{x}}
+\end{equation}
+
+% eq 13
+\begin{equation}
+    \frac{dx}{dt} = \frac{d}{dt} (x^2 + 2x + 1)
+\end{equation}
+
+
+\begin{equation}
+    \geq   
+\end{equation}
+
+\begin{equation}
+    \ni
+\end{equation}
+
+\begin{equation}
+    \propto
+\end{equation}
+
+\begin{equation}
+    \gg
+\end{equation}
+
+\[x^2+y^2=r^2\] % for inline equation
+
+
+
+\begin{flushleft}
+    \bf Left aligning the equation
+\end{flushleft}
+\begin{flalign}   % for aligning multiple equations
+    x^2+y^2=r^2 && \\
+    x^2+y^2=r^2 &&
+\end{flalign}
+
+
+\begin{flalign*}  % for aligning multiple equations without numbering
+    x^2+y^2=r^2 && \\
+    x^2+y^2=r^2 &&
+\end{flalign*}
+
+
+
+
+\begin{equation*}
+    \begin{array}{lll}
+    \mbox{Minimize} & f(\mbox{\boldmath{$x$}}) &\\
+
+    \mbox{Subject to}
+    & g_i(\mbox{\boldmath{$x$}}) \leq 0 ; & i=1,\ldots,m\\
+    & h_k(\mbox{\boldmath{$x$}}) = 0 ; & k=1,\ldots,p\\
+    & x_j \geq 0 ; & j=1,\ldots,n
+    \end{array}
+\end{equation*}
+
+
+
+
+
+\begin{multline}
+    5x_1 + 2x_2 + 3x_3 -\\
+    x_4 - 4x_5 + 5x_6 +\\
+    7x_7 + 3x_8 - 6x_9 -\\
+    2x_{10} - 5x_{11} = 7634
+\end{multline}
+
+
+
+
+
+\begin{equation}
+    \begin{split}
+    f(x) &= x^3 + 2x^2 - 5x + 10\\
+    &= (2)^3 + 2(2)^2 - 5(2) + 10\\
+    &= 16
+    \end{split}
+\end{equation}
+
+
+
+\begin{equation}
+    S = \frac{n}{2}(2a+\overline{n-1}d)
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+    f(x,y)=h \biggl[ & \frac{1}{2}(x+y)+x^2+y^3\\
+    & +\frac{1}{3}z^2\biggr]
+    \end{split}
+\end{equation}
+% here underscore is used for subscript and cap is used for superscript. \\
+
+
+\end{document}

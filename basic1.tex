@@ -1,0 +1,190 @@
+\documentclass[a4paper,12pt]{article} 
+
+\usepackage{graphicx}  % for inserting figure
+\usepackage{amsmath}    % for maths equation
+\usepackage{cite}       % for citation
+\usepackage{natbib}     % for citation
+\usepackage{float}    % for figure position
+\usepackage{listings}   % for code
+\usepackage{algorithm}  % for algorithm
+\usepackage{algpseudocode}  % for algorithm
+
+\usepackage{setspace}  % for line spacing
+\usepackage{amssymb}    % for maths equation
+\usepackage{caption}    % for inserting figure
+\usepackage{subcaption} % for inserting figure
+\usepackage{booktabs}   % for table
+\usepackage{siunitx}    % for table
+\usepackage{enumitem}   % for list
+\usepackage{program}    % for program
+
+\title{Latex basic}
+\author{Atik Mouhtasim}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+
+
+
+This is my 1st latex document. \\
+here double black slash is used for  new line  \\ \\
+Or we can use slash newline for new line \newline
+
+We use slash special character to print: \! \% \$ \& \# \_   etc \\
+
+Now lets make bold and italic text: \\
+\textbf{To bold, we use slash textbf}\\
+\bf we can also use bf to bold text\\
+\textit{To make italic, we use slash textit}\\ 
+\textbf{\textit{Both bold and italic}}\\
+\underline{We use slash underline for undelining}\\
+
+
+For, equation we use amsmath package\\
+
+The equation of straight line is : $y=mx+c$ \\
+(this is the 1st method, see code) \\
+or, we can use equation environment:
+\begin{equation}
+    y=mx+c
+\end{equation} 
+
+
+\begin{equation}
+    y=\int_{-\infty}^{\infty} (x^2 +2) dx
+    \label{eq2}
+\end{equation}
+
+
+
+We use slash newpage for new page:
+\newpage % Go to next page
+
+
+
+
+Now to insert a figure we use graphicx package: \\
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[width=100px]{kitty.png}
+    \caption{Kitten image}
+\end{figure}
+
+
+
+
+
+
+For table we use tabular environment \\
+
+\begin{table}[hbt!]
+    \caption{} % title of Table
+    \centering
+    \begin{tabular}{|c|c|c|} % centered columns (4 columns)
+        \hline
+        col 1 & col 2 & col 3 \\ % name of the columns
+        \hline % horizontal line
+        5     & 6             \\ % value of the cells
+        \hline
+        7     & 8             \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+for parting the document we use section command: \\
+\section{Introduction}
+First section
+\subsection{Type A}
+1st subsection
+\subsection{Type B}
+2nd subsection
+\subsubsection{Type B(a)}
+1st subsubsection
+\section{Conclusion}
+Second section\\
+
+
+
+Lets do some quotation: \\
+\begin{quotation}
+    \begin{spacing}{1.2}
+        Quoted statements are also printed with both side
+        aligned, but in a narrowed width.
+        \begin{flushright}
+            {\it - Name}
+        \end{flushright}
+    \end{spacing}
+\end{quotation}
+
+
+
+
+
+We can use paragraph and subparagraph this way:
+\paragraph{(1) Title:}
+    There are certain key issues to attract
+    investors, which need to be addressed.
+
+    \subparagraph{(1A) Title:}
+        There are certain key issues to attract
+        investors, which need to be addressed.
+\par    % paragraph break
+We use "slash par" for paragraph break \\ \\
+
+\begin{center}
+    Writing language: \hspace{5mm} English. \\
+\end{center} 
+Marks: 100 \hfill Time: 3 Hours.\\ \\
+
+
+
+
+
+
+Now lets make a list:
+\begin{enumerate}
+    \item point 1
+    \item point 2
+    \item point 3
+\end{enumerate}
+
+
+We have dedicated package for algorithm: \\
+\begin{algorithm}[H]
+    \caption{: Insertion Sort}
+    \begin{algorithmic}[1]
+    \For{$j \gets 2$ to $Arr.lenght$}
+    \State $key = Arr[j]$
+    \State $i = j- 1$
+        \While{$i>0$ and $Arr[i]>key$}
+                \State $Arr[i+1]=Arr[i]$
+                \State $i=i-1$
+        \EndWhile
+        \State $Arr[i+1]=key$
+    \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+
+Code for insertion sort: \\
+\begin{verbatim}
+    #include<stdio.h>
+    #include<math.h>
+    int main()
+    {
+    int n, a[101];
+    int i, max;
+    printf("Number of points = ");
+    ...
+    return(0);
+    }
+\end{verbatim}
+
+
+\end{document}
